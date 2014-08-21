@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: Bake posts
- * Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+ * Plugin URI: http://wordpress.org/plugins/bake-posts/
  * Description: Plugin to display Posts on selected Categories,Tags and Recent posts.
- * Version: 1.0
- * Author: Nagarajan
+ * Version: 1.01
+ * Author: wpnaga
  * License: GPL2
  */
 
@@ -117,15 +117,13 @@ function bake_post_tags($atts){
 }
 
 
-
+/*   Function to get Recent posts  */
 function bake_post_recent($atts){
 	if(empty($atts)){
 		$output ="Please set parameters in shortcode";
 	}
 	else{
 		extract($atts);
-		
-		//Check if Category term is Slug or Id
 		
 		$the_query = new WP_Query( 'showposts='.$limit ); 
 		
