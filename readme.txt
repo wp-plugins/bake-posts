@@ -60,8 +60,9 @@ You can use in your page,post and widget areas.
 
 == Screenshots ==
 
-I have added Screen shots for showing Recently added posts with parameters limit="5" and excerpt="5".
+1. I have added Screen shots for showing Recently added posts with parameters limit="5" and excerpt="5". Add new Posts page.
 
+2. Showing the post page.
 == Changelog ==
 
 = 1.0 =
