@@ -65,6 +65,9 @@ You can use in your page,post and widget areas.
 2. Showing the post page.
 == Changelog ==
 
+= 1.01 =
+* Bug Fixes
+
 = 1.0 =
 * This is the first version.
 * Recent posts and posts from category and tags are displayed.
