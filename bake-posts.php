@@ -5,6 +5,7 @@
  * Description: Plugin to display Posts on selected Categories,Tags and Recent posts.
  * Version: 1.01
  * Author: wpnaga
+ * Author URI: http://profiles.wordpress.org/wpnaga/
  * License: GPL2
  */
 

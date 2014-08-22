@@ -60,7 +60,7 @@ You can use in your page,post and widget areas.
 
 == Screenshots ==
 
-No Screen shots.
+I have added Screen shots for showing Recently added posts with parameters limit="5" and excerpt="5".
 
 == Changelog ==
 
