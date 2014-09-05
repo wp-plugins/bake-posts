@@ -1,9 +1,9 @@
 === Bake Posts ===
 Contributors: wpnaga
-Donate link: 
+Donate link: http://www.geeks.gallery
 Tags: recent post, category post,tag post,slug,id,post limit,content,excerpt
 Requires at least: 3.0.1
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,27 +12,27 @@ Bake Post can be used to display recent posts and posts from particular category
 
 == Description ==
 
-Bake post is developed in order to display posts in pages or in widget areas just by pasting the respective shortcodes. Individual shortcodes are available for displaying recent posts, posts on categories and tags. 
+Bake post is developed in order to display posts in pages or in widget areas just by pasting the respective shortcodes. Individual shortcodes are available for displaying recent posts, posts on categories and tags. It has a feature to display featured image as a thumbnail.
 
 Shortcodes for displaying Recent Posts are
 
-1.[bake-post-recent limit=5 excerpt="no"]
+1.[bake-post-recent limit=5 excerpt="no" featured_image="yes"]
 
 2.[bake-post-recent limit=5 excerpt="yes"]
 
-These two short codes can be used to display recent posts. Excerpt option can be used to display description as excerpt or full content.
+These two short codes can be used to display recent posts. Excerpt option can be used to display description as excerpt or full content. Featured Image can also be displayed by setting featured_image="yes" in the shortcode.
 
 Shortcodes for displaying Posts on category are
 
-3.[bake-post-category term='slug' category='all' limit=5 excerpt="no"]
+3.[bake-post-category term='slug' category='all' limit=5 excerpt="no" featured_image="yes"]
 
 4.[bake-post-category term='slug' category='all,stories' limit=5 excerpt="yes"]
 
-5.[bake-post-category term='id' category='1' limit=5 excerpt="yes"]
+5.[bake-post-category term='id' category='1' limit=5 excerpt="yes" featured_image="no"]
 
 6.[bake-post-category term='id' category='1,2,3' limit=5 excerpt="no"]
 
-Term values differs from "id" or "slug". If Slug is used, category value should be category slug values. For example, if your category name is short stories, Slug will be short-stories. We can use multiple slug values seperated by commas. If id is used, category value should be category id values. For example, We can use multiple id values seperated by commas.
+Term values differs from "id" or "slug". If Slug is used, category value should be category slug values. For example, if your category name is short stories, Slug will be short-stories. We can use multiple slug values seperated by commas. If id is used, category value should be category id values. For example, We can use multiple id values seperated by commas.Featured Image can also be displayed by setting featured_image="yes" in the shortcode.
 
 Shortcodes for displaying Posts on Tags are
 
@@ -40,6 +40,7 @@ Shortcodes for displaying Posts on Tags are
 
 8.[bake-post-tags term='id' tag_id='1,2,3' limit=5 excerpt="no"]
 
+Featured Image can also be displayed by setting featured_image="yes" in the shortcode.
 
 == Installation ==
 
@@ -63,11 +64,12 @@ You can use in your page,post and widget areas.
 1. I have added Screen shots for showing Recently added posts with parameters limit="5" and excerpt="5". Add new Posts page.
 
 2. Showing the post page.
+
 == Changelog ==
 
-= 1.01 =
-* Bug Fixes
-
-= 1.0 =
-* This is the first version.
-* Recent posts and posts from category and tags are displayed.
+= 1.1 =
+* Displays Featured Image also.
+* Recent posts 
+* Posts based on category
+* Posts based on tags
+* 

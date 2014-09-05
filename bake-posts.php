@@ -3,7 +3,7 @@
  * Plugin Name: Bake posts
  * Plugin URI: http://wordpress.org/plugins/bake-posts/
  * Description: Plugin to display Posts on selected Categories,Tags and Recent posts.
- * Version: 1.01
+ * Version: 1.1
  * Author: wpnaga
  * Author URI: http://profiles.wordpress.org/wpnaga/
  * License: GPL2
@@ -35,12 +35,17 @@ function bake_post_category($atts){
 		
 		$excerpt = isset($excerpt)?$excerpt:"no"; // Check if Excerpt value is Set by user. If not set, set value as No
 		// The Loop
-		if($excerpt == "yes"){
+		if($excerpt == "yes"){  
+			
+		
 			if ( $the_query->have_posts() ) {
 				$output ='<ul style="list-style-type:none;line-height:24px;">';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_excerpt().'</p></li>';
+					if($featured_image == "yes")
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_post_thumbnail(get_the_ID(),array(100,100),array('align'=>"left",'style'=>"margin-right:10px;")).get_the_excerpt().'</p></li>';
+					else	
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_excerpt().'</p></li>';
 				}
 				$output .='</ul>';
 			} else {
@@ -52,7 +57,10 @@ function bake_post_category($atts){
 				$output ='<ul>';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_content().'</p></li>';
+					if($featured_image == "yes")
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_post_thumbnail(get_the_ID(),array(100,100),array('align'=>"left",'style'=>"margin-right:10px;")).get_the_content().'</p></li>';
+					else					
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_content().'</p></li>';
 				}
 				$output .='</ul>';
 			} else {
@@ -92,7 +100,10 @@ function bake_post_tags($atts){
 				$output ='<ul style="list-style-type:none;line-height:24px;">';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_excerpt().'</p></li>';
+					if($featured_image == "yes")
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_post_thumbnail(get_the_ID(),array(100,100),array('align'=>"left",'style'=>"margin-right:10px;")).get_the_excerpt().'</p></li>';
+					else					
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_excerpt().'</p></li>';
 				}
 				$output .='</ul>';
 			} else {
@@ -104,7 +115,10 @@ function bake_post_tags($atts){
 				$output ='<ul style="list-style-type:none;line-height:24px;">';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_content().'</p></li>';
+					if($featured_image == "yes")
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_post_thumbnail(get_the_ID(),array(100,100),array('align'=>"left",'style'=>"margin-right:10px;")).get_the_content().'</p></li>';
+					else	
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_content().'</p></li>';
 				}
 				$output .='</ul>';
 			} else {
@@ -135,7 +149,10 @@ function bake_post_recent($atts){
 				$output ='<ul style="list-style-type:none;line-height:24px;">';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_excerpt().'</p></li>';
+					if($featured_image == "yes")
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_post_thumbnail(get_the_ID(),array(100,100),array('align'=>"left",'style'=>"margin-right:10px;")).get_the_excerpt().'</p></li>';
+					else
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_excerpt().'</p></li>';
 				}
 				$output .='</ul>';
 			} else {
@@ -147,7 +164,10 @@ function bake_post_recent($atts){
 				$output ='<ul style="list-style-type:none;line-height:24px;">';
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
-					$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_content().'</p></li>';
+					if($featured_image == "yes")
+						$output .='<li>'.the_post_thumbnail( array(100, 100) ).'<a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_content().'</p></li>';
+					else	
+						$output .='<li><a href="'.get_the_permalink().'"><h3>' . get_the_title() . '</h3></a><p>'.get_the_content().'</p></li>';
 				}
 				$output .='</ul>';
 			} else {
