@@ -3,14 +3,15 @@
  * Plugin Name: Bake posts
  * Plugin URI: http://wordpress.org/plugins/bake-posts/
  * Description: Plugin to display Posts on selected Categories,Tags and Recent posts.
- * Version: 1.2.0
+ * Version: 2.0
  * Author: wpnaga
  * Author URI: http://profiles.wordpress.org/wpnaga/
  * License: GPL2
  */
 
-
-
+ 
+/* ******************************************** Plugin Functionality *************************************************************   */ 
+ 
 add_shortcode("bake-post-category", "bake_post_category"); 
 add_shortcode("bake-post-tags", "bake_post_tags"); 
 add_shortcode("bake-post-recent", "bake_post_recent"); 
@@ -180,3 +181,7 @@ function bake_post_recent($atts){
 	return $output;
 	
 }
+
+/* ******************************************** Including Settings Page *************************************************************   */ 
+
+include ('settings.php');

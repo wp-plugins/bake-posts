@@ -60,10 +60,11 @@ Yes. You can use any number of shortcodes.
 You can use in your page,post and widget areas.
 
 == Screenshots ==
+1. Screenshot of shortcode generator page.
 
-1. I have added Screen shots for showing Recently added posts with parameters limit="5" and excerpt="5". Add new Posts page.
+2. Screenshot of pasting the generated shortcode in add new post page.
 
-2. Showing the post page.
+3. Showing the post page displaying recent posts.
 
 == Changelog ==
 
