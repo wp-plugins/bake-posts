@@ -68,9 +68,9 @@ You can use in your page,post and widget areas.
 
 == Changelog ==
 
-= 1.1 =
+= 2.0 =
+* Shortcode generator is included.
 * Displays Featured Image also.
 * Recent posts 
 * Posts based on category
 * Posts based on tags
-* 
