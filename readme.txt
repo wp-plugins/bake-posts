@@ -8,11 +8,11 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Bake Post can be used to display recent posts and posts from particular category and tags.
+Bake Post can be used to display recent posts and posts from particular category and tags. (Not compatible for Multisites)
 
 == Description ==
 
-Bake post is developed in order to display posts in pages or in widget areas just by pasting the respective shortcodes. Individual shortcodes are available for displaying recent posts, posts on categories and tags. It has a feature to display featured image as a thumbnail.
+Bake post is developed in order to display posts in pages or in widget areas just by pasting the respective shortcodes. Individual shortcodes are available for displaying recent posts, posts on categories and tags. It has a feature to display featured image as a thumbnail. Shortcode generator is also available to generate shortcodes according to requirement.
 
 Shortcodes for displaying Recent Posts are
 
