@@ -1,7 +1,7 @@
 === Bake Posts ===
 Contributors: wpnaga
 Donate link: http://www.geeks.gallery
-Tags: recent post, category post,tag post,slug,id,post limit,content,excerpt
+Tags: recent post, category post,tag post,slug,id,post limit,content,excerpt,title
 Requires at least: 3.0.1
 Tested up to: 4.0
 Stable tag: 4.3
@@ -68,9 +68,10 @@ You can use in your page,post and widget areas.
 
 == Changelog ==
 
-= 2.0 =
+= 2.1 =
 * Shortcode generator is included.
 * Displays Featured Image also.
 * Recent posts 
 * Posts based on category
 * Posts based on tags
+* Title only, Excerpt, Content can be displayed

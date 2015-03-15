@@ -4,7 +4,6 @@ jQuery(document).ready(function($){
 		var limit 		= $('#bakelimit').val();
 		var excerpt 	= $("#bakeexcerpt:checked").val();
 		var featured 	= $("#bakeimage:checked").val();
-		
 		var shortcode = '';
 		switch(type){
 			case 'recent':
@@ -22,12 +21,8 @@ jQuery(document).ready(function($){
 	
 		shortcode += 'limit='+limit+' ';
 		
-		if(excerpt == "yes"){
-			shortcode += 'excerpt="yes" ';
-		}
-		else{
-			shortcode += 'excerpt="no" ';
-		}
+		shortcode += 'excerpt="'+excerpt+'" ';
+		
 		
 		if(featured == "yes"){
 			shortcode += 'featured_image="yes" ';

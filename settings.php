@@ -64,8 +64,9 @@ function bakeposts_settings_page() {
 		<tr valign="top">
 			<th scope="row">To Show</th>
 			<td>
-				<input type="radio" id="bakeexcerpt" name="excerpt" value="yes" checked  /> Excerpt <br><br>
-				<input type="radio" id="bakeexcerpt" name="excerpt" value="no"  /> Content
+				<input type="radio" id="bakeexcerpt" name="to_show" value="title" /> Title Only <br><br>
+				<input type="radio" id="bakeexcerpt" name="to_show" value="yes" checked  /> Excerpt <br><br>
+				<input type="radio" id="bakeexcerpt" name="to_show" value="no"  /> Content
 			</td>
         </tr>
 		
