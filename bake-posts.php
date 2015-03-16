@@ -3,7 +3,7 @@
  * Plugin Name: Bake posts
  * Plugin URI: http://wordpress.org/plugins/bake-posts/
  * Description: Plugin to display Posts on selected Categories,Tags and Recent posts.
- * Version: 2.1
+ * Version: 2.1.01
  * Author: wpnaga
  * Author URI: http://profiles.wordpress.org/wpnaga/
  * License: GPL2
@@ -25,7 +25,7 @@ class bakePost{
 		$this->featured_image = $featured_image;
 		$this->task = $task;
 		$this->keyword = $keyword;
-		$this->showAll();
+		//$this->showAll();
 	}
 
 	public function showAll(){
